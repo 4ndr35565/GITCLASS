@@ -1,0 +1,89 @@
+
+body, html, .app {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #4f46e5; /* Indigo-600 */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  position: relative;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Links (pantallas grandes) */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #e0e0e0; /* hover gris */
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  display: none; /* solo en móvil */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Ocultamos en móvil */
+    flex-direction: column;
+    background-color: #4338ca; /* Indigo más oscuro */
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 200px;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Contenido principal */
+.main-content {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.main-content p {
+  color: #555;
+  margin-top: 10px;
+}
